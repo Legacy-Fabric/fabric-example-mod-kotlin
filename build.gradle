@@ -2,6 +2,7 @@ plugins {
 	id "fabric-loom" version "1.5-SNAPSHOT"
 	id "legacy-looming" version "1.5-SNAPSHOT" // Version must be the same as fabric-loom's
 	id "maven-publish"
+	id "org.jetbrains.kotlin.jvm"
 }
 
 base.archivesName = project.archives_base_name
@@ -33,6 +34,8 @@ dependencies {
 
 	// You can retrieve a specific api module using this notation.
 	// modImplementation(legacy.apiModule("legacy-fabric-item-groups-v1", project.fabric_version))
+
+	modImplementation "net.fabricmc:fabric-language-kotlin:${project.fabric_language_kotlin_version}"
 }
 
 processResources {
@@ -84,3 +87,5 @@ publishing {
 		// mavenLocal()
 	}
 }
+
+compileKotlin.kotlinOptions.jvmTarget = "1.8"

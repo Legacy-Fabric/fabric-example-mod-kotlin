@@ -16,7 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      {
+        "adapter": "kotlin",
+        "value": "net.fabricmc.example.ExampleModKt"
+      }
     ]
   },
   "mixins": [
@@ -27,6 +30,7 @@
     "minecraft": "1.8.9"
   },
   "suggests": {
-    "another-mod": "*"
+    "another-mod": "*",
+    "fabric-language-kotlin": ">=1.10.17+kotlin.1.9.22"
   }
 }
