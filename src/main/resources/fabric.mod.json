@@ -18,7 +18,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "net.fabricmc.example.ExampleModKt"
+        "value": "net.legacyfabric.example.ExampleMod"
       }
     ]
   },
@@ -26,11 +26,11 @@
     "modid.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.19",
-    "minecraft": "1.8.9"
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.8.9",
+    "fabric-language-kotlin": "*"
   },
   "suggests": {
-    "another-mod": "*",
-    "fabric-language-kotlin": ">=1.10.17+kotlin.1.9.22"
+    "another-mod": "*"
   }
 }
